@@ -3,6 +3,13 @@ import config from "../config.json"
 import styled from "styled-components"
 import Menu from "../src/components/Menu"
 import { StyledTimeline } from "../src/components/Timeline"
+import { createClient } from "@supabase/supabase-js"
+
+const PROJECT_URL = "https://hhleqygxeugufybvqzwn.supabase.co"
+const PUBLIC_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImhobGVxeWd4ZXVndWZ5YnZxenduIiwicm9sZSI6ImFub24iLCJpYXQiOjE2Njg1NTc0MzAsImV4cCI6MTk4NDEzMzQzMH0.CD8yXPcMxhaKpVKaMnAKkENFbAMmBQcu_r6xlesXn1U"
+const supabase = createClient(PROJECT_URL, PUBLIC_KEY)
+console.log()
 
 function HomePage() {
   // console.log(config.playlist)
